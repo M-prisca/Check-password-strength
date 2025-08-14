@@ -1,12 +1,39 @@
-# React + Vite
+# 🔐 Password Strength Checker (React + TailwindCSS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive password strength checker built with **React** and **TailwindCSS** that validates password requirements in real time.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Live password validation as you type.
+- Eye toggle to show/hide password.
+- Checks for:
+  - At least 8 characters
+  - Contains uppercase character
+  - Contains lowercase character
+  - Contains a digit
+  - Contains a special character
+- Submit button that clears the input and displays the created password.
+- Fully responsive and styled with TailwindCSS.
 
-## Expanding the ESLint configuration
+## Preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![App Screenshot](./public/image.png)
+
+## Technologies Used
+
+- **React** – Frontend library
+- **TailwindCSS** – Utility-first CSS framework
+- **JavaScript (ES6)** – No regex used for validation
+
+## Installation & Setup
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/M-prisca/Check-password-strength.git
+   cd Password-strength
+   npm install
+   npm run dev
+   ```
+
+   |=> Feel free to PR 😊.
