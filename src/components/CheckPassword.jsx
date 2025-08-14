@@ -47,6 +47,30 @@ const CheckPassword = () => {
           >
             {showPassword ? "🙈" : "👁️"}
           </button>
+
+          <h3 className="font-semibold mb-2">Password Requirements</h3>
+          <ul className="space-y-1 mb-4">
+            {requirements.map((req, index) => (
+              <li key={index} className="flex items-center space-x-2">
+                <span
+                  className={`w-4 h-4 flex items-center justify-center rounded-full border ${
+                    req.check
+                      ? "bg-green-500 border-green-500 text-white"
+                      : "border-gray-400"
+                  }`}
+                >
+                  {req.check && "✔"}
+                </span>
+                <span
+                  className={`${
+                    req.check ? "text-green-600" : "text-gray-700"
+                  }`}
+                >
+                  {req.label}
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
