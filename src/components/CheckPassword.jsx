@@ -24,7 +24,33 @@ const CheckPassword = () => {
       check: [...password].some((c) => !/[a-zA-Z0-9]/.test(c)),
     },
   ];
-  return <div></div>;
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <div className="bg-white p-6 rounded-lg shadow-lg w-96">
+        <h2 className="text-2xl font-bold text-center mb-2">Create Password</h2>
+        <p className="text-center text-gray-500 mb-4">
+          Enter a secure password
+        </p>
+
+        <div className="relative mb-4">
+          <input
+            type={showPassword ? "text" : "password"}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Enter your password"
+            className="w-full border rounded-lg p-2 pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <button
+            type="button"
+            className="absolute right-3 top-2 text-gray-500"
+            onClick={() => setShowPassword(!showPassword)}
+          >
+            {showPassword ? "🙈" : "👁️"}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default CheckPassword;
